@@ -1,0 +1,13 @@
+.container{
+    border: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cal{
+    margin: auto;
+    padding: 9px 3px;
+    border: 6px solid black;
+    
+}
+    

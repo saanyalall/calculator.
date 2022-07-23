@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>CALCULATOR</h1>
+</div>
+<div class="table">
+<table class="cal" border="6">
+
+<tr>
+    <td colspan="3"><input type="text" id="result"/></td>
+    <td><input type="button" value="c" onclick="clr()"/></td>
+</tr>
+<tr>
+    <td><input type="button" value="7" onclick="dis('7')"/> </td>
+    <td><input type="button" value="8" onclick="dis('8')"/> </td>
+    <td><input type="button" value="9" onclick="dis('9')"/> </td>
+    <td><input type="button" value="/" onclick="dis('/')"/> </td>
+</tr>
+<tr>
+    <td><input type="button" value="4" onclick="dis('4')"/> </td>
+    <td><input type="button" value="5" onclick="dis('5')"/> </td>
+    <td><input type="button" value="6" onclick="dis('6')"/> </td>
+    <td><input type="button" value="-" onclick="dis('-')"/> </td>
+</tr>
+<tr>
+    <td><input type="button" value="1" onclick="dis('1')"/> </td>
+    <td><input type="button" value="2" onclick="dis('2')"/> </td>
+    <td><input type="button" value="3" onclick="dis('3')"/> </td>
+    <td><input type="button" value="+" onclick="dis('+')"/> </td>
+</tr>
+<tr>
+    <td><input type="button" value="." onclick="dis('.')"/> </td>
+    <td><input type="button" value="0" onclick="dis('0')"/> </td>
+    <td><input type="button" value="=" onclick="solve()"/> </td>
+    <td><input type="button" value="*" onclick="dis('*')"/> </td>
+</tr>
+
+
+</table>
+</div>
+
+<script>
+    function dis(val){
+        //result id h or jo value h vaha pr no rakhenge or add krdenge to result pr print hojayega
+ document.getElementById('result').value += val    
+    }
+    function solve(){
+        //x=8 h agr isko kuch bhi - * + / kiya jo ans aayega equal press krne se vo hoga
+        // y k value
+        let x= document.getElementById('result').value
+        let y= eval(x);  //eval isliye add kiya kyuki vo uska ans aayega or ye predefined h
+        document.getElementById('result').value = y;
+
+    }
+    function clr(){
+         // clr() isliye use kiya is to clear the number
+        document.getElementById('result').value="";
+    }
+</script>
+</body>
+</html>
